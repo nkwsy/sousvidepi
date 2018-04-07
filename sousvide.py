@@ -4,6 +4,7 @@
 import RPi.GPIO as GPIO
 import time
 
+from w1thermsensor import W1ThermSensor
 # Use BCM GPIO references instead of physical pin numbers
 GPIO.setmode(GPIO.BCM)
 
@@ -48,9 +49,7 @@ except KeyboardInterrupt:
   GPIO.cleanup()
 
 
-from w1thermsensor import W1ThermSensor
-import time
-
+##########
 
 def getTemp():
     sensor = W1ThermSensor()
